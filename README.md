@@ -18,6 +18,7 @@ const ExampleComponent = () => {
   const TooltipContent = (<div id="exampleTooltip" className="my-tooltip-style">
     <p>Here is your tooltip content component</p>
   </div>);
+  
   return (<div>
     <Tooltip
       tooltip={TooltipComponent}
