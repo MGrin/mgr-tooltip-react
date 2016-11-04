@@ -34,3 +34,17 @@ const ExampleComponent = () => {
 ```
 
 Note the presence of id inside the tooltip body component as well as in the tooltip parent component - this is mandatory for the tooltip positionnment.
+
+# Documentation
+## Usage
+`Tooltip` works as a wrapper for your component and shows the tooltip on mouse hover on its child element. Child element should be wrapper by a `div` with a unique `id` field, named `parentId`.
+The tooltip content is passed as a propery to the `Tooltip` component. The tooltip wrapper component should also have an `id` named tooltipId.
+
+`Tooltip` component takes following properties:
+* `tooltip`: *React element*, **required**.
+The component that will be rendered as a tooltip. The high order component of tis property should have an `id` name tooltipId.
+* `parentId`: *String*, **required**.
+The id that will be used to query the tooltip parent DOM element.
+* `tooltipId`: *String*, **required**.
+The id that will be used to query the tooltip content DOM element.
+* `placement`: *String*. Can be `"top"`, `"bottom"`, `"left"`, `"right"`.
