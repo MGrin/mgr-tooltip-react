@@ -133,7 +133,7 @@ class Tooltip extends React.Component {
       {this.props.children}
     </div>;
 
-    return <div className="mgrtooltip">
+    return <div className="mgrtooltip" style={{display: 'inline-block'}}>
       {tooltip}
       {parent}
     </div>
@@ -142,7 +142,7 @@ class Tooltip extends React.Component {
 
 Tooltip.propTypes = {
   children: PropTypes.node.isRequired,
-  tooltip: PropTypes.node.isRequired,
+  tooltip: PropTypes.element.isRequired,
   parentId: PropTypes.string.isRequired,
   tooltipId: PropTypes.string.isRequired,
 
