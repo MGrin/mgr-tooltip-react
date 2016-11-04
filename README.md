@@ -10,7 +10,7 @@ npm install mgr-tooltip-react --save
 
 Since it is a React module, I suppose you have the webpack and bable configured.
 
-```
+```js
 import React from 'react';
 import Tooltip from 'mgr-tooltip-react';
 
