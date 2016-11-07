@@ -120,8 +120,8 @@
 	          {
 	            parentId: 'mgrtooltip-parent-top',
 	            tooltipId: 'mgrtooltip-tooltip-top',
-	            tooltip: _react2.default.createElement(TooltipContent, { onShow: function onShow() {
-	                console.log("show");
+	            tooltip: _react2.default.createElement(TooltipContent, { onShow: function onShow(update) {
+	                console.log("show");update();
 	              }, id: 'mgrtooltip-tooltip-top', text: 'Tolltip top' }),
 	            placement: 'top' },
 	          _react2.default.createElement(
@@ -23199,7 +23199,7 @@
 	      });
 
 	      if (this.props.tooltip.props.onShow) {
-	        this.props.tooltip.props.onShow();
+	        this.props.tooltip.props.onShow(this.forceUpdate.bind(this));
 	      }
 	    }
 	  }, {
@@ -23210,7 +23210,7 @@
 	      });
 
 	      if (this.props.tooltip.props.onHide) {
-	        this.props.tooltip.props.onHide();
+	        this.props.tooltip.props.onHide(this.forceUpdate.bind(this));
 	      }
 	    }
 	  }, {

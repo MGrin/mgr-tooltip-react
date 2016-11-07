@@ -56,7 +56,7 @@ class Tooltip extends React.Component {
     });
 
     if (this.props.tooltip.props.onShow) {
-      this.props.tooltip.props.onShow();
+      this.props.tooltip.props.onShow(this.forceUpdate.bind(this));
     }
   }
 
@@ -66,7 +66,7 @@ class Tooltip extends React.Component {
     });
 
     if (this.props.tooltip.props.onHide) {
-      this.props.tooltip.props.onHide();
+      this.props.tooltip.props.onHide(this.forceUpdate.bind(this));
     }
   }
 

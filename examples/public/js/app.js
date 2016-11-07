@@ -18,7 +18,7 @@ class Test extends React.Component {
       <Tooltip
         parentId="mgrtooltip-parent-top"
         tooltipId="mgrtooltip-tooltip-top"
-        tooltip={<TooltipContent onShow={() => {console.log("show");}}id="mgrtooltip-tooltip-top" text="Tolltip top" />}
+        tooltip={<TooltipContent onShow={(update) => {console.log("show"); update()}} id="mgrtooltip-tooltip-top" text="Tolltip top" />}
         placement="top">
         <div id="mgrtooltip-parent-top" style={{display: 'inline-block'}}>
           <img src="http://colorvisiontesting.com/images/plate%20with%205.jpg" />

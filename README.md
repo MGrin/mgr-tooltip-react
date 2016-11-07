@@ -18,7 +18,7 @@ const ExampleComponent = () => {
   const TooltipContent = (<div id="exampleTooltip" className="my-tooltip-style">
     <p>Here is your tooltip content component</p>
   </div>);
-  
+
   return (<div>
     <Tooltip
       tooltip={TooltipComponent}
@@ -42,7 +42,8 @@ The tooltip content is passed as a propery to the `Tooltip` component. The toolt
 
 `Tooltip` component takes following properties:
 * `tooltip`: *React element*, **required**.
-The component that will be rendered as a tooltip. The high order component of tis property should have an `id` name tooltipId.
+The component that will be rendered as a tooltip. The high order component of this property should have an `id` name tooltipId.
+Also, you can pass the `onShow` and `onHide` callbacks that would be called when the tooltip will be shown or hidden. Each of this callbacks will tak an `rerender` frunction that, when called, will rerender the whole tooltip component.
 * `parentId`: *String*, **required**.
 The id that will be used to query the tooltip parent DOM element.
 * `tooltipId`: *String*, **required**.
