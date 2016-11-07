@@ -85,6 +85,10 @@ var Tooltip = function (_React$Component) {
       this.setState({
         visible: true
       });
+
+      if (this.props.tooltip.props.onShow) {
+        this.props.tooltip.props.onShow();
+      }
     }
   }, {
     key: 'handleMouseLeave',
@@ -92,6 +96,10 @@ var Tooltip = function (_React$Component) {
       this.setState({
         visible: false
       });
+
+      if (this.props.tooltip.props.onHide) {
+        this.props.tooltip.props.onHide();
+      }
     }
   }, {
     key: 'computeTooltipStyles',
@@ -176,7 +184,7 @@ var Tooltip = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        { className: 'mgrtooltip' },
+        { className: 'mgrtooltip', style: { display: 'inline-block' } },
         tooltip,
         parent
       );
@@ -188,7 +196,7 @@ var Tooltip = function (_React$Component) {
 
 Tooltip.propTypes = {
   children: _react.PropTypes.node.isRequired,
-  tooltip: _react.PropTypes.node.isRequired,
+  tooltip: _react.PropTypes.element.isRequired,
   parentId: _react.PropTypes.string.isRequired,
   tooltipId: _react.PropTypes.string.isRequired,
 

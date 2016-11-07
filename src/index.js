@@ -54,12 +54,20 @@ class Tooltip extends React.Component {
     this.setState({
       visible: true
     });
+
+    if (this.props.tooltip.props.onShow) {
+      this.props.tooltip.props.onShow();
+    }
   }
 
   handleMouseLeave() {
     this.setState({
       visible: false
     });
+
+    if (this.props.tooltip.props.onHide) {
+      this.props.tooltip.props.onHide();
+    }
   }
 
   computeTooltipStyles() {
