@@ -1,6 +1,6 @@
 {
   "name": "mgr-tooltip-react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple react component for tooltips.",
   "main": "index.js",
   "repository": {
