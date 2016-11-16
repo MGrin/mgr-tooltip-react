@@ -1,4 +1,4 @@
-# mgr-form-react examples
+# mgr-tooltip-react examples
 
 # How to run
 ```
