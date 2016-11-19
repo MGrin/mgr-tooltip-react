@@ -1,6 +1,8 @@
 # mgr-tooltip-react
 Simple react component for tooltips. A tooltip content can be any React component and is styled by yourself.
 
+
+## Example: [mgr-tooltip-react](https://mgrin.github.io/mgr-tooltip-react/index.html)
 # How to install
 ```
 npm install mgr-tooltip-react --save
